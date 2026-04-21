@@ -107,30 +107,32 @@
                 style="border-color: rgba(255, 255, 255, 0.15)"
             />
             <table class="glass-table">
-                <tr>
-                    <td>スクリーン</td>
-                    <td>{{ detailItem?.screenName }}</td>
-                </tr>
-                <tr>
-                    <td>開始</td>
-                    <td>{{ detailItem?.startTime }}</td>
-                </tr>
-                <tr>
-                    <td>終了</td>
-                    <td>{{ detailItem?.endTime }}</td>
-                </tr>
-                <tr>
-                    <td>上映時間</td>
-                    <td>{{ detailItem?.duration }}分</td>
-                </tr>
-                <tr>
-                    <td>座席状況</td>
-                    <td>{{ detailItem?.seatStatus || "—" }}</td>
-                </tr>
-                <tr v-if="detailItem?.movieNameEn">
-                    <td>英語名</td>
-                    <td>{{ detailItem.movieNameEn }}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>スクリーン</td>
+                        <td>{{ detailItem?.screenName }}</td>
+                    </tr>
+                    <tr>
+                        <td>開始</td>
+                        <td>{{ detailItem?.startTime }}</td>
+                    </tr>
+                    <tr>
+                        <td>終了</td>
+                        <td>{{ detailItem?.endTime }}</td>
+                    </tr>
+                    <tr>
+                        <td>上映時間</td>
+                        <td>{{ detailItem?.duration }}分</td>
+                    </tr>
+                    <tr>
+                        <td>座席状況</td>
+                        <td>{{ detailItem?.seatStatus || "—" }}</td>
+                    </tr>
+                    <tr v-if="detailItem?.movieNameEn">
+                        <td>英語名</td>
+                        <td>{{ detailItem.movieNameEn }}</td>
+                    </tr>
+                </tbody>
             </table>
             <div class="text-right mt-4">
                 <v-btn variant="text" @click="detailOpen = false">閉じる</v-btn>
